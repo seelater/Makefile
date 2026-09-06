@@ -20,7 +20,6 @@ ifeq ($(origin CC),default)
 endif
 override CFLAGS += -std=c2x -Wall -Wextra -pedantic $(INCS)\
 		 #-D_POSIX_C_SOURCE=200809L
-		 #-lbox2d -lraylib -lm -lGL -ldl -lrt -lpthread -lX11
 
 ####################################################
 #ROOT_DIR = $(shell pwd)
@@ -33,7 +32,7 @@ DEP_DIR   = $(OBJ_DIR)/deps
 TEST_DIR  = $(ROOT_DIR)/test
 ####################################################
 INCS  = -I$(INC_DIR)
-LIBS  = -L$(LIB_DIR) #-lm 
+LIBS  = -L$(LIB_DIR) #-lbox2d -lraylib -lm -lGL -ldl -lrt -lpthread -lX11
 SRC  := $(shell find $(SRC_DIR) -name "*.c")
 OBJ  := $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRC)) 
 DEPS := $(OBJ:.o=.d)
