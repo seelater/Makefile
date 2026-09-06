@@ -1,5 +1,5 @@
 # Makefile
-c proj makefile example
+c proj makefile example with dependencies check. touch .h  
 
 # proj struct
 
