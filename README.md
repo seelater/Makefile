@@ -9,4 +9,9 @@ c proj makefile example with dependencies check. touch .h
 
 ./include	- .h files
 
+./lib     -     libs.  
+EXAMPLE:  
+cp libname.a ./lib/  
+after LIBS  = -L$(LIB_DIR) add -lname  
+
 ./Makefile  - 
